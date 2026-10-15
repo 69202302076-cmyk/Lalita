@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalita Nangam - Student Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            900: '#831843',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card shadow-sm border-b border-slate-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="flex items-center space-x-2 text-xl font-bold text-slate-900 tracking-wide">
+                    <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-500 to-rose-400 text-white flex items-center justify-center font-extrabold text-sm shadow-md">C</span>
+                    <span>CAKE<span class="text-brand-600">.</span>PORTFOLIO</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#about" class="hover:text-brand-600 transition-colors">ประวัติส่วนตัว</a>
+                    <a href="#education" class="hover:text-brand-600 transition-colors">ประวัติการศึกษา</a>
+                    <a href="#skills" class="hover:text-brand-600 transition-colors">ความสามารถ & งานอดิเรก</a>
+                    <a href="#contact" class="hover:text-brand-600 transition-colors">การติดต่อ</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="mobile-link block py-2 px-3 rounded-md text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">ประวัติส่วนตัว</a>
+            <a href="#education" class="mobile-link block py-2 px-3 rounded-md text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">ประวัติการศึกษา</a>
+            <a href="#skills" class="mobile-link block py-2 px-3 rounded-md text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">ความสามารถ & งานอดิเรก</a>
+            <a href="#contact" class="mobile-link block py-2 px-3 rounded-md text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">การติดต่อ</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden bg-gradient-to-br from-pink-50 via-slate-50 to-rose-50">
+        <!-- Background decorative elements -->
+        <div class="absolute top-10 right-10 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 bg-rose-400/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Text Content -->
+                <div class="md:col-span-7 text-center md:text-left space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-100/80 text-brand-700 text-sm font-medium border border-brand-200">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>นักศึกษาวิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
+                        สวัสดีค่ะ, ฉันชื่อ <br class="hidden sm:inline" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-rose-500">ลลิตา นางาม</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 max-w-xl mx-auto md:mx-0 font-light">
+                        ชื่อเล่น <span class="font-semibold text-slate-800">"เค้ก" (Cake)</span> เป็นคนร่าเริง ใจดี เข้ากับคนอื่นได้ง่าย และมุ่งมั่นตั้งใจทำทุกบทบาทให้เต็มที่ที่สุด
+                    </p>
+                    
+                    <!-- Quote Box -->
+                    <div class="p-4 rounded-2xl bg-white/70 border-l-4 border-brand-500 shadow-sm max-w-md mx-auto md:mx-0">
+                        <p class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-1">Motto / คติประจำใจ</p>
+                        <p class="text-slate-700 italic font-medium">"อย่าเสียใจกับอะไรที่พยายามเต็มที่แล้ว"</p>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-rose-500 text-white font-medium shadow-lg shadow-brand-500/25 hover:shadow-xl hover:shadow-brand-500/35 hover:-translate-y-0.5 transition-all text-center">
+                            <i class="fa-solid fa-paper-plane mr-2"></i>ติดต่อฉัน
+                        </a>
+                        <a href="#about" class="px-6 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 font-medium shadow-sm hover:bg-slate-50 hover:border-slate-300 transition-all text-center">
+                            <i class="fa-solid fa-user mr-2"></i>ดูข้อมูลส่วนตัว
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avatar / Profile Card Container -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl p-3 bg-gradient-to-tr from-brand-500 via-rose-300 to-pink-200 shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-300">
+                        <div class="w-full h-full rounded-2xl bg-white overflow-hidden flex flex-col items-center justify-center p-6 text-center relative group">
+                            <!-- Placeholder Profile Avatar -->
+                            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-brand-100 to-pink-100 flex items-center justify-center text-brand-500 text-5xl mb-4 border-4 border-white shadow-inner">
+                                <i class="fa-solid fa-user-circle"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800">ลลิตา นางาม (เค้ก)</h3>
+                            <p class="text-sm text-slate-500 mt-1">เกิด 22 สิงหาคม 2550 (อายุ 19 ปี)</p>
+                            <div class="mt-4 flex gap-2">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">สัญชาติ: ไทย</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">ศาสนา: พุทธ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">ข้อมูลส่วนตัว</h2>
+                <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-600 mt-3">ทำความรู้จักตัวตนและลักษณะเฉพาะส่วนตัวของฉัน</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- General Info Card -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">ข้อมูลพื้นฐาน</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-500">ชื่อ-สกุล:</span>
+                            <span class="font-medium text-slate-800">นางสาวลลิตา นางาม</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-500">ชื่อเล่น:</span>
+                            <span class="font-medium text-slate-800">เค้ก (Cake)</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-500">วันเกิด:</span>
+                            <span class="font-medium text-slate-800">22 สิงหาคม 2550</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-500">อายุ:</span>
+                            <span class="font-medium text-slate-800">19 ปี</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Physical Traits Card -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">ลักษณะทางกายภาพ & สัญชาติ</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-500">ส่วนสูง:</span>
+                            <span class="font-medium text-slate-800">165 ซม.</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-500">น้ำหนัก:</span>
+                            <span class="font-medium text-slate-800">70 กก.</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-500">สัญชาติ / เชื้อชาติ:</span>
+                            <span class="font-medium text-slate-800">ไทย / ไทย</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-500">ศาสนา:</span>
+                            <span class="font-medium text-slate-800">พุทธ</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Personality Card -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">อุปนิสัยส่วนตัว</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        เป็นคนที่มีนิสัย <span class="font-semibold text-brand-600">ร่าเริง แจ่มใส</span> และมีความ <span class="font-semibold text-brand-600">ใจดี</span> มีมนุษยสัมพันธ์ที่ดี สามารถปรับตัวและเข้ากับผู้อื่นได้ง่าย ทำให้ทำงานร่วมกับเพื่อนร่วมงานหรือเพื่อนนักศึกษาได้ดี
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 md:py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">ประวัติการศึกษา</h2>
+                <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-600 mt-3">เส้นทางการเรียนรู้และความสำเร็จทางด้านการศึกษา</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative max-w-3xl mx-auto">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 -translate-x-1/2"></div>
+
+                <!-- Timeline Item 1: Higher Education -->
+                <div class="relative mb-12 md:mb-10">
+                    <div class="flex flex-col md:flex-row items-start">
+                        <!-- Bullet icon -->
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-600 border-4 border-white text-white flex items-center justify-center text-xs shadow-md z-10">
+                            <i class="fa-solid fa-university"></i>
+                        </div>
+
+                        <!-- Card Right/Desktop -->
+                        <div class="ml-12 md:ml-0 md:w-1/2 md:pr-10 md:text-right">
+                            <span class="inline-block px-3 py-1 bg-brand-100 text-brand-700 font-semibold text-xs rounded-full mb-2">ปัจจุบัน</span>
+                            <h3 class="text-lg font-bold text-slate-900">ระดับอุดมศึกษา</h3>
+                            <p class="text-slate-700 font-medium">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</p>
+                            <p class="text-slate-500 text-sm mt-1">จังหวัดขอนแก่น</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2: High School -->
+                <div class="relative mb-12 md:mb-10">
+                    <div class="flex flex-col md:flex-row items-start md:justify-end">
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-slate-300 border-4 border-white text-slate-600 flex items-center justify-center text-xs shadow-md z-10">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <!-- Card Left/Desktop -->
+                        <div class="ml-12 md:ml-0 md:w-1/2 md:pl-10">
+                            <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-slate-400 text-xs font-medium">มัธยมศึกษาตอนปลาย</span>
+                                <h3 class="text-lg font-bold text-slate-900 mt-1">โรงเรียนชุมแพศึกษา</h3>
+                                <div class="mt-3 inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-emerald-50 text-emerald-700 text-sm font-medium">
+                                    <i class="fa-solid fa-award"></i>
+                                    <span>ผลการเรียนเฉลี่ย: 3.81</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: Middle School -->
+                <div class="relative mb-12 md:mb-10">
+                    <div class="flex flex-col md:flex-row items-start">
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-slate-300 border-4 border-white text-slate-600 flex items-center justify-center text-xs shadow-md z-10">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+
+                        <!-- Card Right/Desktop -->
+                        <div class="ml-12 md:ml-0 md:w-1/2 md:pr-10 md:text-right">
+                            <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-slate-400 text-xs font-medium">มัธยมศึกษาตอนต้น</span>
+                                <h3 class="text-lg font-bold text-slate-900 mt-1">โรงเรียนภูกระดึงวิทยาคม</h3>
+                                <p class="text-slate-500 text-xs mt-0.5">อ.ภูกระดึง จ.เลย</p>
+                                <div class="mt-3 inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-emerald-50 text-emerald-700 text-sm font-medium">
+                                    <i class="fa-solid fa-award"></i>
+                                    <span>ผลการเรียนเฉลี่ย: 3.56</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4: Primary School -->
+                <div class="relative">
+                    <div class="flex flex-col md:flex-row items-start md:justify-end">
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-slate-300 border-4 border-white text-slate-600 flex items-center justify-center text-xs shadow-md z-10">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <!-- Card Left/Desktop -->
+                        <div class="ml-12 md:ml-0 md:w-1/2 md:pl-10">
+                            <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-slate-400 text-xs font-medium">ประถมศึกษา</span>
+                                <h3 class="text-lg font-bold text-slate-900 mt-1">โรงเรียนบ้านห้วยคะมะ</h3>
+                                <div class="mt-3 inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-emerald-50 text-emerald-700 text-sm font-medium">
+                                    <i class="fa-solid fa-award"></i>
+                                    <span>ผลการเรียนเฉลี่ย: 3.76</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Hobbies Section -->
+    <section id="skills" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Special Talents -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">ความสามารถพิเศษ</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-center space-x-4 hover:border-brand-200 transition-colors">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-volleyball"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800">เล่นวอลเลย์บอล</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">กีฬาประเภททีม เสริมสร้างทักษะการทำงานร่วมกับผู้อื่นและการวางแผน</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-center space-x-4 hover:border-brand-200 transition-colors">
+                            <div class="w-12 h-12 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800">เล่นแบดมินตัน</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">ออกกำลังกาย พัฒนาไหวพริบ ความว่องไว และสมาธิ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobbies -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">งานอดิเรก</h2>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center hover:bg-rose-50/50 hover:border-rose-200 transition-all">
+                            <i class="fa-solid fa-film text-2xl text-rose-500 mb-2"></i>
+                            <h4 class="font-medium text-slate-800 text-sm">ดูหนัง / ดูซีรี่ย์</h4>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center hover:bg-rose-50/50 hover:border-rose-200 transition-all">
+                            <i class="fa-solid fa-gamepad text-2xl text-indigo-500 mb-2"></i>
+                            <h4 class="font-medium text-slate-800 text-sm">เล่นเกม</h4>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center hover:bg-rose-50/50 hover:border-rose-200 transition-all">
+                            <i class="fa-solid fa-music text-2xl text-emerald-500 mb-2"></i>
+                            <h4 class="font-medium text-slate-800 text-sm">ฟังเพลง</h4>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center hover:bg-rose-50/50 hover:border-rose-200 transition-all">
+                            <i class="fa-solid fa-book-open-reader text-2xl text-amber-500 mb-2"></i>
+                            <h4 class="font-medium text-slate-800 text-sm">อ่านหนังสือการ์ตูน</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-slate-900 text-white relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight">ข้อมูลการติดต่อ</h2>
+                <div class="w-12 h-1 bg-brand-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-400 mt-3">สอบถามข้อมูลเพิ่มเติม หรือเชื่อมต่อกับฉันได้ทางช่องทางด้านล่างนี้</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Phone -->
+                <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center hover:border-brand-500 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">เบอร์โทรศัพท์</h3>
+                    <a href="tel:0954593302" class="text-lg font-bold text-white hover:text-brand-400 transition-colors">095-459-3302</a>
+                </div>
+
+                <!-- Line -->
+                <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center hover:border-emerald-500 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-brands fa-line"></i>
+                    </div>
+                    <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">LINE ID / Account</h3>
+                    <p class="text-base font-bold text-white">Lalita Nangam</p>
+                    <p class="text-xs text-slate-400 mt-1">ID: cake220850</p>
+                </div>
+
+                <!-- Facebook / Social -->
+                <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center hover:border-blue-500 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">Facebook</h3>
+                    <p class="text-base font-bold text-white">cake 0822</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>© 2026 Lalita Nangam. Created for Student Portfolio.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Mobile navigation menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
